@@ -8,6 +8,8 @@ import {
         } from "lucide-react"; 
 import "./Navbar.css";
 import ApiIcon from '@mui/icons-material/Api';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import DateRangeIcon from '@mui/icons-material/DateRange';
 
 
 const Navbar: React.FC = () => {
@@ -49,7 +51,7 @@ const Navbar: React.FC = () => {
           <li className="nav-item">
             <Link href="/home/CoachingIndividual" className="nav-link text-white">
               <div className="link-content d-flex align-items-center">
-                <User className="me-1" />
+                <DateRangeIcon className="me-1" />
                 coaching individual
               </div>
             </Link>
@@ -58,7 +60,7 @@ const Navbar: React.FC = () => {
           <li className="nav-item">
             <Link href="/home/treinamentos" className="nav-link text-white">
               <div className="link-content d-flex align-items-center">
-                <User className="me-1" />
+                <AutoStoriesIcon className="me-1" />
                 Treinamentos
               </div>
             </Link>

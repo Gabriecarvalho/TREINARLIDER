@@ -78,8 +78,8 @@ export default function Page() {
   }
 
   return (
-    <div className="p-4 flex flex-col justify-center items-center min-h-screen">
-      <h1 className="text-4xl font-bold mb-12">Perfil pessoal</h1>
+    <div className="p-4 flex flex-col items-center min-h-screen">
+      <h1 className="text-4xl font-bold mb-8">Perfil pessoal</h1>
 
       <div className={`w-full lg:w-1/2 bg-white rounded-lg p-6 flex flex-col shadow-lg border border-gray-300 ${isEditing ? "border-blue-500" : ""}`}>
         <div className="flex flex-col items-center mt-8 lg:mt-16">
