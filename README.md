@@ -12,6 +12,7 @@ Implementar um programa de capacitação para líderes da empresa XYZ, a fim de 
 | Como usuario, quero poder personalizar minhas informaçoes    | 5 pontos        | Sprint 1   | - Alteraçao dos dados do usuario.        |
 | Como usuario, quero participar de treinamentos online e presenciais.             | 8 pontos        | Sprint 2   | - Treinamentos online estão acessíveis via videoconferência.<br>- Calendário de eventos está visível. |
 | Como usuario, quero agendar uma sessão de coaching individual.                   | 5 pontos        | Sprint 2   | - O sistema de agendamento funciona.<br>- Notificações por e-mail são enviadas.              |
+| Como usuario, quero acessar treinamentos especificos da plataforma e ver sobre eles | 3 pontos        | Sprint 3   | - A pagina contem um video e uma descriçao sobre o treinamento.<br> |
 | Como usuario, quero avaliar os treinamentos que realizei.                 | 3 pontos        | Sprint 3   | - O formulário de avaliação é acessível.<br>- Os feedbacks são armazenados corretamente.      |
 
 ## Requisitos Funcionais:
