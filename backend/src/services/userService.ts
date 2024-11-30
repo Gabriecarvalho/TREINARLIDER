@@ -30,3 +30,10 @@ export async function loginUser(email: string, password: string) {
 
     return { user, token };
 }
+
+export async function updateUser(id: number, name: string, email: string, phone: string, location: string) {
+    const query = 'UPDATE User SET name = ?, email = ?, phone = ?, location = ? WHERE id = ?';
+    const values = [name, email, phone, location, id];
+    const [result] = await db.query(query, values);
+    return result;
+}

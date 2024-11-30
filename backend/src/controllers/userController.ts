@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { registerUser, loginUser } from '../services/userService';
+import { registerUser, loginUser, updateUser } from '../services/userService';
 import jwt from 'jsonwebtoken';
 import {db} from '../config/database'; // Adjust the path as necessary
 
@@ -52,5 +52,21 @@ export async function getProfile(req: Request, res: Response) {
         res.status(200).json(user);
     } catch (error) {
         res.status(401).json({ error: 'Token inválido' });
+    }
+}
+
+export async function updateProfile(req: Request, res: Response) {
+    const token = req.headers.authorization?.split(' ')[1];
+    if (!token) {
+        return res.status(401).json({ error: 'Token não fornecido' });
+    }
+
+    try {
+        const decoded = jwt.verify(token, JWT_SECRET) as any;
+        const { name, email, phone, location } = req.body;
+        const result = await updateUser(decoded.id, name, email, phone, location);
+        res.status(200).json(result);
+    } catch (error) {
+        res.status(400).json({ error: 'Erro ao atualizar o perfil' });
     }
 }

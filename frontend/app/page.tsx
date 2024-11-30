@@ -66,7 +66,7 @@ export default function Login() {
           type="button"
           className="w-full text-white py-2 px-4 rounded-md text-sm font-medium mt-2"
           style={{ backgroundColor: "#357edd" }}
-          onClick={() => window.location.href = '/register'}
+          onClick={() => window.location.href = '/cadastro'}
         >
           Criar conta
         </button>
