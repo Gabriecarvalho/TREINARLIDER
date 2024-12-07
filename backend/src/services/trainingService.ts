@@ -14,18 +14,18 @@ interface Training {
 interface TrainingResult extends Coach, Training {}
 
 const getTrainings = async (): Promise<TrainingResult[]> => {
-    const query = `
-        SELECT Coach.coachName, Coach.email, Training.trainingName
-        FROM Coach
-        JOIN Training ON Coach.id = Training.coachId
-    `;
-    try {
-        const [results] = await db.query(query);
-        return results as TrainingResult[];
-    } catch (err) {
-        console.error('Database Error:', err);
-        throw err;
-    }
+  const query = `
+      SELECT Coach.id AS coachId, Coach.coachName, Coach.email, Training.trainingName
+      FROM Coach
+      JOIN Training ON Coach.id = Training.coachId
+  `;
+  try {
+      const [results] = await db.query(query);
+      return results as TrainingResult[];
+  } catch (err) {
+      console.error('Database Error:', err);
+      throw err;
+  }
 };
 
 const getTrainingById = async (id: number): Promise<TrainingResult | null> => {

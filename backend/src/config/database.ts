@@ -2,7 +2,7 @@ import mysql from 'mysql2/promise';
 import dotenv from 'dotenv';
 
 dotenv.config();
-
+//configuraçao da conexao com o banco de dados
 let connection: mysql.Connection;
 
 export const connectDb = async () => {

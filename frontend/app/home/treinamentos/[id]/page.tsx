@@ -13,7 +13,7 @@ export default function TrainingDetailsPage({ params }: { params: { id: string }
   const [training, setTraining] = useState<Training | null>(null);
   const { id } = params;//pega o id do treinamento para requisiçao
 
-  useEffect(() => {
+  useEffect(() => {//pegando as informaçoes do treinamento com base no id passada na url
     if (id) {
       fetch(`http://localhost:3001/api/trainings/${id}`)
         .then((response) => response.json())
@@ -28,11 +28,11 @@ export default function TrainingDetailsPage({ params }: { params: { id: string }
     return videoId ? `https://www.youtube.com/embed/${videoId}` : null;
   };
 
-  if (!training) {
+  if (!training) {//para esperar a requisiçao ser feita 
     return <div>Loading...</div>;
   }
 
-  const embedLink = getEmbedLink(training.videoLink);
+  const embedLink = getEmbedLink(training.videoLink);//pegando o link do video
 
   return (
     <div className="p-4 flex flex-col items-center min-h-screen">
